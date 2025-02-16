@@ -104,3 +104,25 @@ on `evaluation` directory,
 ```bash
 bash eval_medicine.sh
 ```
+
+
+## 3. Visualization
+
+You can find the visualized results and code on `evaluation/visualization`.
+
+Figure 3: Perplexity comparison on the medical dataset for different training approaches. 
+
+![image](https://github.com/user-attachments/assets/2e8499df-d088-4d21-9c36-0dfcc45735b1)
+
+
+
+Figure 4: Performance of the finance domain after overwriting with medicine data.
+
+![image](https://github.com/user-attachments/assets/e1558d1e-5dc0-484e-bf1b-c92056a6ac83)
+
+
+Figure 5: Perplexity scores of CPT and TELLME methods based on training steps.
+
+![image](https://github.com/user-attachments/assets/d1042482-233d-424f-85e9-24c7b17715a1)
+
+
