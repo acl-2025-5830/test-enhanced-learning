@@ -74,10 +74,14 @@ These options provide flexibility in experimenting with different task objective
 
 ## 2. evaluation
 ```bash
-cd evauation/lm-evaluation-harness
+cd evaluation
+git clone https://github.com/EleutherAI/lm-evaluation-harness.git
+cd lm-evaluation-harness
 pip install -e .
 cd ..
 ```
+
+
 
 ### 2.1 Evaluate on the finance dataset
 on `evaluation` directory,
