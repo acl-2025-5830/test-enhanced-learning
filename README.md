@@ -1,11 +1,10 @@
 # TELLME: Test-Enhanced Learning for Language Model Enrichment
+This repository accompanies our paper submission on TELLME (Test-Enhanced Learning for Language Model Enrichment). It provides code and instructions for training, evaluating, and visualizing results for language models using our proposed method.
+You can also find the trained models and datasets (TEL, InstPT) on our anonymous Hugging Face repository.  [link](https://huggingface.co/anonymous4459)
 
+# Model & Dataset: https://huggingface.co/anonymous4459
 
-## You can find the trained models and datasets (TEL, InstPT) on our anonymous Hugging Face repository.  [link](https://huggingface.co/anonymous4459)
-
-# https://huggingface.co/anonymous4459
-
-## 0. git clone
+## 0. Clone the Repository
 ```bash
 git clone https://github.com/acl-2025-5830/test-enhanced-learning.git
 cd test-enhanced-learning
@@ -13,9 +12,7 @@ cd test-enhanced-learning
 
 ## 1. Training
 
-
-
-### 1.1 Environmental Settings
+### 1.1 Environment Setup
 
 ```bash
 python3 -m venv .my_env
@@ -28,13 +25,13 @@ pip install -e .
 export HF_TOKEN=YOUR_TOKEN
 ```
 
-### 1.3 Training TEL method
+### 1.3 Training with TEL Method
 ```bash
 cd scripts
 bash pretrain_tel.sh
 ```
 
-This script file contains following contents:
+The `pretrain_tel.sh` script contains the following:
 ```bash
 #!/bin/bash
 scripts=$(readlink -f "$0")
@@ -73,9 +70,9 @@ These options provide flexibility in experimenting with different task objective
 
 
 
-## 2. evaluation
+## 2. Evaluation
 
-### 2.1 enviroment setup
+### 2.1 Enviroment setup
 ```bash
 cd evaluation
 git clone https://github.com/EleutherAI/lm-evaluation-harness.git
@@ -85,7 +82,7 @@ cd ..
 ```
 
 
-### 2.2 Add new tasks
+### 2.2 Adding New Tasks for Evaluation
 on `evaluation` directory,
 ```bash
 
@@ -99,7 +96,7 @@ bash eval_finance.sh
 ```
 
 
-### 2.3 Evaluate on the medical dataset
+### 2.4 Evaluate on the medical dataset
 on `evaluation` directory,
 
 ```bash
@@ -127,3 +124,4 @@ Figure 5: Perplexity scores of CPT and TELLME methods based on training steps.
 ![image](https://github.com/user-attachments/assets/d1042482-233d-424f-85e9-24c7b17715a1)
 
 
+**Thank you for using TELLME!**
