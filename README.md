@@ -1,6 +1,14 @@
 # TELLME: Test-Enhanced Learning for Language Model Enrichment
 
+## 0. git clone
+```bash
+git clone https://github.com/acl-2025-5830/test-enhanced-learning.git
+cd test-enhanced-learning
+```
+
 ## 1. Training
+
+
 
 ### 1.1 Environmental Settings
 
