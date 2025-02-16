@@ -4,6 +4,10 @@ You can also find the trained models and datasets (TEL, InstPT) on our anonymous
 
 # Model & Dataset: https://huggingface.co/anonymous4459
 
+You can find the TEL dataset at [anonymous4459/TEL_train_datasets](https://huggingface.co/datasets/anonymous4459/TEL_train_datasets), and the InstPT dataset at [anonymous4459/InstPT_train_datasets](https://huggingface.co/datasets/anonymous4459/InstPT_train_datasets).
+
+
+
 ## 0. Clone the Repository
 ```bash
 git clone https://github.com/acl-2025-5830/test-enhanced-learning.git
