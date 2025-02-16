@@ -1,0 +1,384 @@
+{
+    "results": {
+        "mmlu_continuation_business_ethics": {
+            "alias": "mmlu_continuation_business_ethics",
+            "acc,none": 0.69,
+            "acc_stderr,none": 0.04648231987117316,
+            "acc_norm,none": 0.65,
+            "acc_norm_stderr,none": 0.0479372485441102
+        },
+        "mmlu_continuation_econometrics": {
+            "alias": "mmlu_continuation_econometrics",
+            "acc,none": 0.39473684210526316,
+            "acc_stderr,none": 0.045981880578165414,
+            "acc_norm,none": 0.38596491228070173,
+            "acc_norm_stderr,none": 0.04579639422070435
+        },
+        "mmlu_continuation_high_school_macroeconomics": {
+            "alias": "mmlu_continuation_high_school_macroeconomics",
+            "acc,none": 0.4025641025641026,
+            "acc_stderr,none": 0.024864995159767755,
+            "acc_norm,none": 0.43846153846153846,
+            "acc_norm_stderr,none": 0.025158266016868564
+        },
+        "mmlu_continuation_high_school_microeconomics": {
+            "alias": "mmlu_continuation_high_school_microeconomics",
+            "acc,none": 0.4117647058823529,
+            "acc_stderr,none": 0.03196876989195778,
+            "acc_norm,none": 0.49159663865546216,
+            "acc_norm_stderr,none": 0.0324739027656967
+        },
+        "mmlu_continuation_management": {
+            "alias": "mmlu_continuation_management",
+            "acc,none": 0.5339805825242718,
+            "acc_stderr,none": 0.0493929144727348,
+            "acc_norm,none": 0.6310679611650486,
+            "acc_norm_stderr,none": 0.0477761518115674
+        },
+        "mmlu_continuation_marketing": {
+            "alias": "mmlu_continuation_marketing",
+            "acc,none": 0.6495726495726496,
+            "acc_stderr,none": 0.03125610824421881,
+            "acc_norm,none": 0.6196581196581197,
+            "acc_norm_stderr,none": 0.031804252043840985
+        },
+        "mmlu_continuation_professional_accounting": {
+            "alias": "mmlu_continuation_professional_accounting",
+            "acc,none": 0.36524822695035464,
+            "acc_stderr,none": 0.028723863853281278,
+            "acc_norm,none": 0.32978723404255317,
+            "acc_norm_stderr,none": 0.0280459469420424
+        }
+    },
+    "group_subtasks": {
+        "mmlu_continuation_business_ethics": [],
+        "mmlu_continuation_econometrics": [],
+        "mmlu_continuation_high_school_macroeconomics": [],
+        "mmlu_continuation_high_school_microeconomics": [],
+        "mmlu_continuation_management": [],
+        "mmlu_continuation_marketing": [],
+        "mmlu_continuation_professional_accounting": []
+    },
+    "configs": {
+        "mmlu_continuation_business_ethics": {
+            "task": "mmlu_continuation_business_ethics",
+            "tag": "mmlu_continuation_other",
+            "dataset_path": "hails/mmlu_no_train",
+            "dataset_name": "business_ethics",
+            "dataset_kwargs": {
+                "trust_remote_code": true
+            },
+            "test_split": "test",
+            "fewshot_split": "dev",
+            "doc_to_text": "Question: {{question.strip()}}\nAnswer:",
+            "doc_to_target": "{{answer}}",
+            "unsafe_code": false,
+            "doc_to_choice": "{{choices}}",
+            "description": "The following are questions (with answers) about business ethics.\n\n",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "fewshot_config": {
+                "sampler": "first_n"
+            },
+            "num_fewshot": 4,
+            "output_type": "multiple_choice",
+            "repeats": 1,
+            "should_decontaminate": false,
+            "metadata": {
+                "version": 1.0
+            }
+        },
+        "mmlu_continuation_econometrics": {
+            "task": "mmlu_continuation_econometrics",
+            "tag": "mmlu_continuation_social_sciences",
+            "dataset_path": "hails/mmlu_no_train",
+            "dataset_name": "econometrics",
+            "dataset_kwargs": {
+                "trust_remote_code": true
+            },
+            "test_split": "test",
+            "fewshot_split": "dev",
+            "doc_to_text": "Question: {{question.strip()}}\nAnswer:",
+            "doc_to_target": "{{answer}}",
+            "unsafe_code": false,
+            "doc_to_choice": "{{choices}}",
+            "description": "The following are questions (with answers) about econometrics.\n\n",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "fewshot_config": {
+                "sampler": "first_n"
+            },
+            "num_fewshot": 4,
+            "output_type": "multiple_choice",
+            "repeats": 1,
+            "should_decontaminate": false,
+            "metadata": {
+                "version": 1.0
+            }
+        },
+        "mmlu_continuation_high_school_macroeconomics": {
+            "task": "mmlu_continuation_high_school_macroeconomics",
+            "tag": "mmlu_continuation_social_sciences",
+            "dataset_path": "hails/mmlu_no_train",
+            "dataset_name": "high_school_macroeconomics",
+            "dataset_kwargs": {
+                "trust_remote_code": true
+            },
+            "test_split": "test",
+            "fewshot_split": "dev",
+            "doc_to_text": "Question: {{question.strip()}}\nAnswer:",
+            "doc_to_target": "{{answer}}",
+            "unsafe_code": false,
+            "doc_to_choice": "{{choices}}",
+            "description": "The following are questions (with answers) about high school macroeconomics.\n\n",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "fewshot_config": {
+                "sampler": "first_n"
+            },
+            "num_fewshot": 4,
+            "output_type": "multiple_choice",
+            "repeats": 1,
+            "should_decontaminate": false,
+            "metadata": {
+                "version": 1.0
+            }
+        },
+        "mmlu_continuation_high_school_microeconomics": {
+            "task": "mmlu_continuation_high_school_microeconomics",
+            "tag": "mmlu_continuation_social_sciences",
+            "dataset_path": "hails/mmlu_no_train",
+            "dataset_name": "high_school_microeconomics",
+            "dataset_kwargs": {
+                "trust_remote_code": true
+            },
+            "test_split": "test",
+            "fewshot_split": "dev",
+            "doc_to_text": "Question: {{question.strip()}}\nAnswer:",
+            "doc_to_target": "{{answer}}",
+            "unsafe_code": false,
+            "doc_to_choice": "{{choices}}",
+            "description": "The following are questions (with answers) about high school microeconomics.\n\n",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "fewshot_config": {
+                "sampler": "first_n"
+            },
+            "num_fewshot": 4,
+            "output_type": "multiple_choice",
+            "repeats": 1,
+            "should_decontaminate": false,
+            "metadata": {
+                "version": 1.0
+            }
+        },
+        "mmlu_continuation_management": {
+            "task": "mmlu_continuation_management",
+            "tag": "mmlu_continuation_other",
+            "dataset_path": "hails/mmlu_no_train",
+            "dataset_name": "management",
+            "dataset_kwargs": {
+                "trust_remote_code": true
+            },
+            "test_split": "test",
+            "fewshot_split": "dev",
+            "doc_to_text": "Question: {{question.strip()}}\nAnswer:",
+            "doc_to_target": "{{answer}}",
+            "unsafe_code": false,
+            "doc_to_choice": "{{choices}}",
+            "description": "The following are questions (with answers) about management.\n\n",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "fewshot_config": {
+                "sampler": "first_n"
+            },
+            "num_fewshot": 4,
+            "output_type": "multiple_choice",
+            "repeats": 1,
+            "should_decontaminate": false,
+            "metadata": {
+                "version": 1.0
+            }
+        },
+        "mmlu_continuation_marketing": {
+            "task": "mmlu_continuation_marketing",
+            "tag": "mmlu_continuation_other",
+            "dataset_path": "hails/mmlu_no_train",
+            "dataset_name": "marketing",
+            "dataset_kwargs": {
+                "trust_remote_code": true
+            },
+            "test_split": "test",
+            "fewshot_split": "dev",
+            "doc_to_text": "Question: {{question.strip()}}\nAnswer:",
+            "doc_to_target": "{{answer}}",
+            "unsafe_code": false,
+            "doc_to_choice": "{{choices}}",
+            "description": "The following are questions (with answers) about marketing.\n\n",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "fewshot_config": {
+                "sampler": "first_n"
+            },
+            "num_fewshot": 4,
+            "output_type": "multiple_choice",
+            "repeats": 1,
+            "should_decontaminate": false,
+            "metadata": {
+                "version": 1.0
+            }
+        },
+        "mmlu_continuation_professional_accounting": {
+            "task": "mmlu_continuation_professional_accounting",
+            "tag": "mmlu_continuation_other",
+            "dataset_path": "hails/mmlu_no_train",
+            "dataset_name": "professional_accounting",
+            "dataset_kwargs": {
+                "trust_remote_code": true
+            },
+            "test_split": "test",
+            "fewshot_split": "dev",
+            "doc_to_text": "Question: {{question.strip()}}\nAnswer:",
+            "doc_to_target": "{{answer}}",
+            "unsafe_code": false,
+            "doc_to_choice": "{{choices}}",
+            "description": "The following are questions (with answers) about professional accounting.\n\n",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "fewshot_config": {
+                "sampler": "first_n"
+            },
+            "num_fewshot": 4,
+            "output_type": "multiple_choice",
+            "repeats": 1,
+            "should_decontaminate": false,
+            "metadata": {
+                "version": 1.0
+            }
+        }
+    },
+    "versions": {
+        "mmlu_continuation_business_ethics": 1.0,
+        "mmlu_continuation_econometrics": 1.0,
+        "mmlu_continuation_high_school_macroeconomics": 1.0,
+        "mmlu_continuation_high_school_microeconomics": 1.0,
+        "mmlu_continuation_management": 1.0,
+        "mmlu_continuation_marketing": 1.0,
+        "mmlu_continuation_professional_accounting": 1.0
+    },
+    "n-shot": {
+        "mmlu_continuation_business_ethics": 4,
+        "mmlu_continuation_econometrics": 4,
+        "mmlu_continuation_high_school_macroeconomics": 4,
+        "mmlu_continuation_high_school_microeconomics": 4,
+        "mmlu_continuation_management": 4,
+        "mmlu_continuation_marketing": 4,
+        "mmlu_continuation_professional_accounting": 4
+    },
+    "higher_is_better": {
+        "mmlu_continuation_business_ethics": {
+            "acc": true,
+            "acc_norm": true
+        },
+        "mmlu_continuation_econometrics": {
+            "acc": true,
+            "acc_norm": true
+        },
+        "mmlu_continuation_high_school_macroeconomics": {
+            "acc": true,
+            "acc_norm": true
+        },
+        "mmlu_continuation_high_school_microeconomics": {
+            "acc": true,
+            "acc_norm": true
+        },
+        "mmlu_continuation_management": {
+            "acc": true,
+            "acc_norm": true
+        },
+        "mmlu_continuation_marketing": {
+            "acc": true,
+            "acc_norm": true
+        },
+        "mmlu_continuation_professional_accounting": {
+            "acc": true,
+            "acc_norm": true
+        }
+    },
+    "n-samples": {
+        "mmlu_continuation_professional_accounting": {
+            "original": 282,
+            "effective": 282
+        },
+        "mmlu_continuation_marketing": {
+            "original": 234,
+            "effective": 234
+        },
+        "mmlu_continuation_management": {
+            "original": 103,
+            "effective": 103
+        },
+        "mmlu_continuation_high_school_microeconomics": {
+            "original": 238,
+            "effective": 238
+        },
+        "mmlu_continuation_high_school_macroeconomics": {
+            "original": 390,
+            "effective": 390
+        },
+        "mmlu_continuation_econometrics": {
+            "original": 114,
+            "effective": 114
+        },
+        "mmlu_continuation_business_ethics": {
+            "original": 100,
+            "effective": 100
+        }
+    },
+    "config": {
+        "model": "hf",
+        "model_num_parameters": 8030261248,
+        "model_dtype": "torch.bfloat16",
+        "model_revision": "main",
+        "model_sha": "",
+        "batch_size": "1",
+        "batch_sizes": [],
+        "device": null,
+        "use_cache": null,
+        "limit": null,
+        "bootstrap_iters": 100000,
+        "gen_kwargs": null,
+        "random_seed": 42,
+        "numpy_seed": 42,
+        "torch_seed": 42,
+        "fewshot_seed": 42
+    },
+    "git_hash": "370e2f9e",
+    "date": 1739629421.7508118,
+    "transformers_version": "4.48.1",
+    "upper_git_hash": "370e2f9e5bbe59912644b1b6e052e17be31d6858",
+    "tokenizer_pad_token": [
+        "<|end_of_text|>",
+        "128001"
+    ],
+    "tokenizer_eos_token": [
+        "<|end_of_text|>",
+        "128001"
+    ],
+    "tokenizer_bos_token": [
+        "<|begin_of_text|>",
+        "128000"
+    ],
+    "eot_token_id": 128001,
+    "max_length": 131072,
+    "task_hashes": {},
+    "model_source": "hf",
+    "system_instruction": null,
+    "system_instruction_sha": null,
+    "fewshot_as_multiturn": false,
+    "chat_template": null,
+    "chat_template_sha": null,
+    "start_time": 869748.386706715,
+    "end_time": 869807.665873281,
+    "total_evaluation_time_seconds": "59.279166565975174"
+}

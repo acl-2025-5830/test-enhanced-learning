@@ -1,0 +1,160 @@
+{
+    "results": {
+        "tel_fomc": {
+            "alias": "tel_fomc",
+            "f1,none": 0.26306501679636013,
+            "f1_stderr,none": "N/A"
+        },
+        "tel_nifty": {
+            "alias": "tel_nifty",
+            "f1,none": 0.23893989398939897,
+            "f1_stderr,none": "N/A"
+        }
+    },
+    "group_subtasks": {
+        "tel_fomc": [],
+        "tel_nifty": []
+    },
+    "configs": {
+        "tel_fomc": {
+            "task": "tel_fomc",
+            "dataset_path": "TheFinAI/flare-fomc",
+            "test_split": "test",
+            "doc_to_text": "{{query}} ",
+            "doc_to_target": "{{gold}}",
+            "unsafe_code": false,
+            "doc_to_choice": "{{choices}}",
+            "description": "",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "num_fewshot": 0,
+            "metric_list": [
+                {
+                    "metric": "acc",
+                    "aggregation": "mean",
+                    "higher_is_better": true
+                },
+                {
+                    "metric": "f1",
+                    "aggregation": "def macro_f1_score(items):\n    from sklearn.metrics import f1_score\n\n    unzipped_list = list(zip(*items))\n    golds = unzipped_list[0]\n    preds = unzipped_list[1]\n    fscore = f1_score(golds, preds, average=\"macro\")\n    return fscore\n",
+                    "average": "macro",
+                    "hf_evaluate": true,
+                    "higher_is_better": true
+                }
+            ],
+            "output_type": "multiple_choice",
+            "repeats": 1,
+            "should_decontaminate": true
+        },
+        "tel_nifty": {
+            "task": "tel_nifty",
+            "dataset_path": "raeidsaqur/NIFTY",
+            "training_split": "train",
+            "validation_split": "validation",
+            "test_split": "test",
+            "doc_to_text": "{{conversations[0]['value']}}",
+            "doc_to_target": "{{label}}",
+            "unsafe_code": false,
+            "doc_to_choice": [
+                "Neutral",
+                "Rise",
+                "Fall"
+            ],
+            "description": "",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "num_fewshot": 0,
+            "metric_list": [
+                {
+                    "metric": "acc",
+                    "aggregation": "mean",
+                    "higher_is_better": true
+                },
+                {
+                    "metric": "f1",
+                    "aggregation": "def macro_f1_score(items):\n    from sklearn.metrics import f1_score\n\n    unzipped_list = list(zip(*items))\n    golds = unzipped_list[0]\n    preds = unzipped_list[1]\n    fscore = f1_score(golds, preds, average=\"macro\")\n    return fscore\n",
+                    "average": "macro",
+                    "hf_evaluate": true,
+                    "higher_is_better": true
+                }
+            ],
+            "output_type": "multiple_choice",
+            "repeats": 1,
+            "should_decontaminate": true
+        }
+    },
+    "versions": {
+        "tel_fomc": "Yaml",
+        "tel_nifty": "Yaml"
+    },
+    "n-shot": {
+        "tel_fomc": 0,
+        "tel_nifty": 0
+    },
+    "higher_is_better": {
+        "tel_fomc": {
+            "acc": true,
+            "f1": true
+        },
+        "tel_nifty": {
+            "acc": true,
+            "f1": true
+        }
+    },
+    "n-samples": {
+        "tel_nifty": {
+            "original": 317,
+            "effective": 317
+        },
+        "tel_fomc": {
+            "original": 496,
+            "effective": 496
+        }
+    },
+    "config": {
+        "model": "hf",
+        "model_num_parameters": 1711376384,
+        "model_dtype": "torch.bfloat16",
+        "model_revision": "main",
+        "model_sha": "effd688a12921b4cc83e3312b6feb579f70f9c71",
+        "batch_size": "1",
+        "batch_sizes": [],
+        "device": null,
+        "use_cache": null,
+        "limit": null,
+        "bootstrap_iters": 100000,
+        "gen_kwargs": null,
+        "random_seed": 42,
+        "numpy_seed": 42,
+        "torch_seed": 42,
+        "fewshot_seed": 42
+    },
+    "git_hash": "370e2f9e",
+    "date": 1739629738.6609514,
+    "transformers_version": "4.48.1",
+    "upper_git_hash": "370e2f9e5bbe59912644b1b6e052e17be31d6858",
+    "tokenizer_pad_token": [
+        "<|endoftext|>",
+        "0"
+    ],
+    "tokenizer_eos_token": [
+        "<|endoftext|>",
+        "0"
+    ],
+    "tokenizer_bos_token": [
+        "<|endoftext|>",
+        "0"
+    ],
+    "eot_token_id": 0,
+    "max_length": 8192,
+    "task_hashes": {},
+    "model_source": "hf",
+    "system_instruction": null,
+    "system_instruction_sha": null,
+    "fewshot_as_multiturn": false,
+    "chat_template": null,
+    "chat_template_sha": null,
+    "start_time": 870065.219445216,
+    "end_time": 870110.542636073,
+    "total_evaluation_time_seconds": "45.32319085695781"
+}
