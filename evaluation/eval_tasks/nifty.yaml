@@ -1,0 +1,16 @@
+task: nifty
+dataset_path: raeidsaqur/NIFTY
+training_split: train
+validation_split: validation
+test_split: test
+output_type: multiple_choice
+doc_to_text: "{{conversations[0]['value']}}"
+doc_to_target: "{{label}}"
+doc_to_choice: ["Neutral", "Rise", "Fall"]
+should_decontaminate: true
+metric_list:
+  - metric: f1
+    aggregation: !function utils.macro_f1_score
+    average: macro
+    hf_evaluate: true
+    higher_is_better: True

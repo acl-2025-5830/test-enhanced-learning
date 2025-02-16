@@ -1,0 +1,14 @@
+task: fomc
+dataset_path: TheFinAI/flare-fomc
+output_type: multiple_choice
+test_split: test
+doc_to_text: "{{query}} "
+doc_to_target: "{{gold}}"
+doc_to_choice: "{{choices}}"
+should_decontaminate: true
+metric_list:
+  - metric: f1
+    aggregation: !function utils.macro_f1_score
+    average: macro
+    hf_evaluate: true
+    higher_is_better: True
