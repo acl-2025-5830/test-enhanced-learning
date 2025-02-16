@@ -73,6 +73,8 @@ These options provide flexibility in experimenting with different task objective
 
 
 ## 2. evaluation
+
+### 2.1 enviroment setup
 ```bash
 cd evaluation
 git clone https://github.com/EleutherAI/lm-evaluation-harness.git
@@ -82,15 +84,21 @@ cd ..
 ```
 
 
+### 2.2 Add new tasks
+on `evaluation` directory,
+```bash
 
-### 2.1 Evaluate on the finance dataset
+cp -r eval_tasks/ lm-evaluation-harness/lm_eval/tasks/
+```
+### 2.3 Evaluate on the finance dataset
 on `evaluation` directory,
 
 ```bash
 bash eval_finance.sh
 ```
 
-### 2.2 Evaluate on the medical dataset
+
+### 2.3 Evaluate on the medical dataset
 on `evaluation` directory,
 
 ```bash
