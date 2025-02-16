@@ -1,5 +1,9 @@
 # TELLME: Test-Enhanced Learning for Language Model Enrichment
 
+
+
+You can find the trained models and datasets (TEL, InstPT) on our anonymous Hugging Face repository. [link](https://huggingface.co/anonymous4459)
+
 ## 0. git clone
 ```bash
 git clone https://github.com/acl-2025-5830/test-enhanced-learning.git
